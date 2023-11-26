@@ -12,7 +12,7 @@ html{
 }
 
 .card-dolar{
-  border-color: #B3FF85;
+  border-color: #fffd79;
   border-width: medium;
   /* box-shadow: 3px 2px 2px 3px rgba(20, 255, 32, 0.726); */
   cursor: pointer;
@@ -24,7 +24,12 @@ html{
   color:gray;
 }
 .card-footer .monto{
-  color: #fffd9b;
+  color: #9bffa8;
+  font-size: 1.5rem;
+}
+
+.card-footer .montoUsd{
+  color: #9bdaff;
   font-size: 1.5rem;
 }
 

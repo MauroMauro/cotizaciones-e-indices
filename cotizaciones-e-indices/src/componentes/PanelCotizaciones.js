@@ -19,7 +19,8 @@ const PanelCotizaciones = () => {
             .then(cotizacionesDeLaApi => setCotizacionesDolar(cotizacionesDeLaApi))
     },[])
 
-    const [monto, setMonto] = useState(0)
+    const [montoArs, setMontoArs] = useState(0)
+    const [montoUsd, setMontoUsd] = useState(0)
 
     const [showOficial, setShowOficial] = useState(false)
     const handleShowOficial = () => setShowOficial(true)
@@ -33,7 +34,12 @@ const PanelCotizaciones = () => {
 
     return (
         <div className='bg-dark text-center'>
-            <BloqueInputCotizaciones monto={monto} setMonto={setMonto}/>
+
+            <Container className='bg-dark' >
+                <BloqueInputCotizaciones monto={montoArs} setMonto={setMontoArs} moneda={"ARS"}/> 
+                <BloqueInputCotizaciones monto={montoUsd} setMonto={setMontoUsd} moneda={"USD"}/> 
+            </Container>
+
             <Container className='bg-dark' >
                 <Row bg="dark" data-bs-theme="dark" className='my-2'>
                     
@@ -46,8 +52,12 @@ const PanelCotizaciones = () => {
                                 {cotizacionesDolar.oficial}
                             </CardTitle>
                             <CardFooter>
-                                <b>Según las tenencias ingresadas:</b><br></br>
-                                se compran <span className='monto'>{(monto/(cotizacionesDolar.oficial)).toFixed(2)}</span> USD
+                                Sus <b>ARS</b> en tenencia equivalen a<br></br>
+                                <span className='monto'>{(montoArs/(cotizacionesDolar.oficial)).toFixed(2)}</span> USD
+                                <br></br>
+                                <br></br>
+                                Sus <b>USD</b> intercambiados a precio oficial equivalen a <br></br>
+                                <span className='montoUsd'>{(montoUsd*(cotizacionesDolar.oficial)).toFixed(0)}</span> ARS
                             </CardFooter>
                         </Card>
                     </Col>
@@ -69,8 +79,12 @@ const PanelCotizaciones = () => {
                                 {cotizacionesDolar.blue}
                             </CardTitle>
                             <CardFooter>
-                                <b>Según las tenencias ingresadas:</b><br></br>
-                                se compran <span className='monto'>{(monto/(cotizacionesDolar.blue)).toFixed(2)}</span> USD
+                                Sus <b>ARS</b> en tenencia equivalen a<br></br>
+                                <span className='monto'>{(montoArs/(cotizacionesDolar.blue)).toFixed(2)}</span> USD
+                                <br></br>
+                                <br></br>
+                                Sus <b>USD</b> intercambiados a precio dolar blue equivalen a <br></br>
+                                <span className='montoUsd'>{(montoUsd*(cotizacionesDolar.blue)).toFixed(0)}</span> ARS
                             </CardFooter>
                         </Card>
                     </Col>
@@ -92,8 +106,12 @@ const PanelCotizaciones = () => {
                                 {cotizacionesDolar.solidario}
                             </CardTitle>
                             <CardFooter>
-                                <b>Según las tenencias ingresadas:</b><br></br>
-                                se compran <span className='monto'>{(monto/(cotizacionesDolar.solidario)).toFixed(2)}</span> USD
+                                Sus <b>ARS</b> en tenencia equivalen a<br></br>
+                                <span className='monto'>{(montoArs/(cotizacionesDolar.solidario)).toFixed(2)}</span> USD
+                                <br></br>
+                                <br></br>
+                                Sus <b>USD</b> intercambiados a precio dolar solidario equivalen a <br></br>
+                                <span className='montoUsd'>{(montoUsd*(cotizacionesDolar.solidario)).toFixed(0)}</span> ARS
                             </CardFooter>
                         </Card>
                         
@@ -109,14 +127,18 @@ const PanelCotizaciones = () => {
                     <Col md={3}>
                         <Card className="card-dolar py-4 my-2" onClick={handleShowMep}>
                             <CardTitle>
-                                Dolar Mep
+                                Dolar MEP
                             </CardTitle>
                             <CardTitle className='display-4'>
                                 {cotizacionesDolar.mep}
                             </CardTitle>
                             <CardFooter>
-                                <b>Según las tenencias ingresadas:</b><br></br>
-                                se compran <span className='monto'>{(monto/(cotizacionesDolar.mep)).toFixed(2)}</span> USD
+                                Sus <b>ARS</b> en tenencia equivalen a<br></br>
+                                <span className='monto'>{(montoArs/(cotizacionesDolar.mep)).toFixed(2)}</span> USD
+                                <br></br>
+                                <br></br>
+                                Sus <b>USD</b> intercambiados a precio MEP equivalen a <br></br>
+                                <span className='montoUsd'>{(montoUsd*(cotizacionesDolar.mep)).toFixed(0)}</span> ARS
                             </CardFooter>
                         </Card>
                     </Col>
