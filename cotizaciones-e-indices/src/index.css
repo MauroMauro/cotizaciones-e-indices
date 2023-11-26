@@ -19,3 +19,7 @@ html{
 .modal-content{
   background-color: #212529;
 }
+
+.btn-close{
+  color: azure;
+}

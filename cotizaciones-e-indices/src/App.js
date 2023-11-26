@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 import PanelCotizaciones from './componentes/PanelCotizaciones'
 import NavbarTop from './componentes/NavbarTop'
-
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Footer from './componentes/Footer'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 
 
 const App = () => {
-
 
   return (
     <div className='bg-dark'>      
