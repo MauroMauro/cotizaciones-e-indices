@@ -3,12 +3,12 @@ html{
 }
 
 .container-footer{
-  position:absolute;
-  color:rgb(184, 184, 184);
-  background-color: rgba(0, 0, 0, 0.582);
-  font-weight: 500;
+  /* position:absolute; */
+  color:rgb(245, 245, 245);
+  /* background-color: rgba(0, 0, 0, 0.582); */
+  /* font-weight: 500;
   bottom: 0px;
-  width: auto;
+  width: auto; */
 }
 
 .card-dolar{
@@ -44,4 +44,9 @@ html{
 .input-group-text{
   background-color: #212529;
   color: whitesmoke;
+}
+
+.form-control{
+  background-color: #212529;
+  color:whitesmoke;
 }
