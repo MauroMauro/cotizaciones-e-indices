@@ -4,9 +4,11 @@ html{
 
 .container-footer{
   position:absolute;
-  bottom: 0;
-  color:aqua;
+  color:rgb(184, 184, 184);
+  background-color: rgba(0, 0, 0, 0.582);
+  font-weight: 500;
   bottom: 0px;
+  width: auto;
 }
 
 .card-dolar{
@@ -16,10 +18,25 @@ html{
   cursor: pointer;
 }
 
+.card-footer{
+  background-color: transparent;
+  font-size: small;
+  color:gray;
+}
+.card-footer .monto{
+  color: #fffd9b;
+  font-size: 1.5rem;
+}
+
 .modal-content{
   background-color: #212529;
 }
 
 .btn-close{
   color: azure;
+}
+
+.input-group-text{
+  background-color: #212529;
+  color: whitesmoke;
 }
