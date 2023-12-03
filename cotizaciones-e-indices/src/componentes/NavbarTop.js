@@ -1,34 +1,54 @@
-import {
-  BrowserRouter as Router,
-  Routes, Route, Link
-} from "react-router-dom"
+import { useState } from "react"
+
 
 import PanelCotizaciones from "./PanelCotizaciones"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import { Navbar, Nav, Container } from "react-bootstrap"
+import { Navbar, Nav, Container, Button } from "react-bootstrap"
 import Calculadora from "./Calculadora"
 
 
 
-const NavbarTop = () => (
+
+const NavbarTop = () => {
+  const [pulsedCotizaciones, setPulsedCotizaciones] = useState(true)
+  const [pulsedCalculadora, setPulsedCalculadora] = useState(false)
+
+  const handleCotizacionesPulsed = () =>{
+    if(pulsedCotizaciones){
+      setPulsedCalculadora(false)
+    } else {
+      setPulsedCalculadora(false)
+      setPulsedCotizaciones(true)
+    }
+  }
+
+  const handleCalculadoraPulsed = () =>{
+    if(pulsedCalculadora){
+      setPulsedCotizaciones(false)
+    } else {
+      setPulsedCotizaciones(false)
+      setPulsedCalculadora(true)
+    }
+  }
+
+  return (
     <div>
-        <Navbar bg="dark" data-bs-theme="dark">
+      <Navbar bg="dark" data-bs-theme="dark">
         <Container>
           <Nav className="me-auto">
-            <Nav.Link href="https://mauromauro.github.io/cotizaciones-e-indices/">Cotizaciones</Nav.Link>
-            <Nav.Link href="https://mauromauro.github.io/cotizaciones-e-indices/calculadora">Calculadora Rulo</Nav.Link>
+            <Nav.Link onClick={ () => handleCotizacionesPulsed()}>Cotizaciones</Nav.Link>
+            <Nav.Link onClick={() => handleCalculadoraPulsed()}>Calculadora Rulo</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
 
-      <Router>
-        <Routes>
-          <Route path="/" element={<PanelCotizaciones />} />
-          <Route path='/calculadora' element={<Calculadora />} />
-        </Routes>
-      </Router>
-    </div>
-)
+      {pulsedCotizaciones ? <PanelCotizaciones /> : null}
+      {pulsedCalculadora ? <Calculadora /> : null}
+
+
+
+    </div>)
+}
 
 export default NavbarTop
