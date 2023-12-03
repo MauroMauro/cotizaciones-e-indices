@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cotizaciones-e-indices/static/css/main.f2897cb1.css",
+    "main.js": "/cotizaciones-e-indices/static/js/main.060e06eb.js",
+    "index.html": "/cotizaciones-e-indices/index.html",
+    "main.f2897cb1.css.map": "/cotizaciones-e-indices/static/css/main.f2897cb1.css.map",
+    "main.060e06eb.js.map": "/cotizaciones-e-indices/static/js/main.060e06eb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2897cb1.css",
+    "static/js/main.060e06eb.js"
+  ]
+}
