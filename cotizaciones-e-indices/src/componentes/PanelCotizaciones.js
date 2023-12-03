@@ -51,11 +51,12 @@ const PanelCotizaciones = () => {
 
 
     return (
-        <div className='bg-dark text-center'>
+        <div className='bg-dark text-center text-white'>
+            <h1>Cotizaciones</h1>
 
             <Container className='bg-dark' >
-                <BloqueInputCotizaciones monto={montoArs} setMonto={setMontoArs} moneda={"ARS"} />
-                <BloqueInputCotizaciones monto={montoUsd} setMonto={setMontoUsd} moneda={"USD"} />
+                <BloqueInputCotizaciones monto={montoArs} setMonto={setMontoArs} moneda={"ARS"} texto={"Ingrese sus tenencias en "}/>
+                <BloqueInputCotizaciones monto={montoUsd} setMonto={setMontoUsd} moneda={"USD"} texto={"Ingrese sus tenencias en "}/>
             </Container>
 
             <Container className='bg-dark' >

@@ -11,8 +11,31 @@ html{
   width: auto; */
 }
 
+.container-footer a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #9bdaff;
+}
+
+.container-footer a:hover{
+  color: #1898e2;
+}
+
 .card-dolar{
   border-color: #fffd79;
+  border-width: medium;
+  /* box-shadow: 3px 2px 2px 3px rgba(20, 255, 32, 0.726); */
+  cursor: pointer;
+}
+
+.card-rulo{
+  border-color: #00ff89;
+  border-width: medium;
+  /* box-shadow: 3px 2px 2px 3px rgba(20, 255, 32, 0.726); */
+  cursor: pointer;
+}
+.card-pf{
+  border-color: #9bdaff;
   border-width: medium;
   /* box-shadow: 3px 2px 2px 3px rgba(20, 255, 32, 0.726); */
   cursor: pointer;
@@ -49,4 +72,13 @@ html{
 .form-control{
   background-color: #212529;
   color:whitesmoke;
+}
+
+.text-grey{
+  color:grey;
+}
+
+.resultados{
+  color: #fffd79;
+  font-size: 1.7rem;
 }

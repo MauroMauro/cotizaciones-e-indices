@@ -3,7 +3,7 @@ import { Form, InputGroup } from "react-bootstrap"
 
 
 
-const BloqueInputCotizaciones = ({monto,setMonto,moneda}) => {
+const BloqueInputCotizaciones = ({monto,setMonto,moneda,texto}) => {
 
 const handleMontoInput = (event) =>{
     setMonto(event.target.value)
@@ -12,7 +12,7 @@ const handleMontoInput = (event) =>{
     return (
         <InputGroup className="p-3">
             <InputGroup.Text id="inputGroup-sizing-default"  >
-                Ingrese sus tenencias en {moneda} 
+                {texto} {moneda} 
             </InputGroup.Text>
             <Form.Control
                 aria-label="Default"
