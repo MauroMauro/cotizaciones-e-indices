@@ -36,6 +36,16 @@ El resultado responsive es gracias al uso de la librería Bootstrap.
 
 * _API pública de data de cotizaciones de moneda_
 
+##
+### Instrucciones de ejecución 🔨
+1. Descargar o clonar el repositorio.
+2. Abrir el terminal y ubicarse en el directorio raiz del proyecto.
+3. Ejecutar _npm i_
+4. Ejecutar _npm start_
+
+ℹ
+**Requisitos:**
+Tener instalado Node.js
 
 ---
 
