@@ -78,6 +78,10 @@ html{
   color:grey;
 }
 
+.text-blue{
+  color:#f49bff;
+}
+
 .resultados{
   color: #fffd79;
   font-size: 1.7rem;

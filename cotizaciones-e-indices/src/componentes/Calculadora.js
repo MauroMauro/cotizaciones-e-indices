@@ -3,12 +3,13 @@ import { useState, useEffect } from 'react'
 import servicioDolar from '../servicios/dolar'
 
 import BloqueInputCotizaciones from './BloqueInputCotizaciones'
+import ApiResultMock from './ApiResultMock'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Card, CardTitle, Col, Container, Row, Modal, Button, CardFooter } from "react-bootstrap"
+import {Container } from "react-bootstrap"
 
 const Calculadora = () => {
-    const [cotizacionesDolar, setCotizacionesDolar] = useState([])
+    const [cotizacionesDolar, setCotizacionesDolar] = useState(ApiResultMock)
 
     useEffect(() => {
         servicioDolar.getAll()
@@ -41,8 +42,8 @@ const Calculadora = () => {
                                     <p className='h3'><b className='border border-white rounded-circle px-2'>1°</b></p>
                                     <hr></hr>
                                     <p className='text-grey'>Con <b>{montoArs} ARS</b> se compran</p>
-                                    <p className='display-5'> {(montoArs / cotizacionesDolar.solidario).toFixed(2)} </p><b>USD</b>
-                                    <p className='text-grey'>a cotización <i>dolar solidario</i></p>
+                                    <p className='display-5'> {(montoArs / ((cotizacionesDolar.ahorro).ask)).toFixed(2)} </p><b>USD</b>
+                                    <p className='text-grey'>a cotización <i>dolar ahorro</i></p>
                                 </div>
                             </div>
 
@@ -50,8 +51,8 @@ const Calculadora = () => {
                                 <div className='card card-rulo bg-dark py-4 my-2 text-white'>
                                     <p className='h3'><b className='border border-white rounded-circle px-2'>2°</b></p>
                                     <hr></hr>
-                                    <p className='text-grey'>Esos <b>{(montoArs / cotizacionesDolar.solidario).toFixed(2)} USD</b> se venden a</p>
-                                    <p className='display-5'> {(((montoArs / cotizacionesDolar.solidario).toFixed(2)) * cotizacionesDolar.blue).toFixed(0)} </p><b>ARS</b>
+                                    <p className='text-grey'>Esos <b>{(montoArs / ((cotizacionesDolar.ahorro).ask)).toFixed(2)} USD</b> se venden a</p>
+                                    <p className='display-5'> {(((montoArs / ((cotizacionesDolar.ahorro).ask)).toFixed(2)) * (cotizacionesDolar.blue).ask).toFixed(0)} </p><b>ARS</b>
                                     <p className='text-grey'>a cotización <i>dolar blue</i></p>
                                 </div>
                             </div>
@@ -60,8 +61,8 @@ const Calculadora = () => {
                                 <div className='card card-rulo bg-dark py-4 my-2 text-white'>
                                     <p className='h3'><b className='border border-white rounded-circle px-2'>3°</b></p>
                                     <hr></hr>
-                                    <p className='text-grey'>Con <b>{(((montoArs / cotizacionesDolar.solidario).toFixed(2)) * cotizacionesDolar.blue).toFixed(0)} ARS</b> se comprarán</p>
-                                    <p className='display-5'> {((((montoArs / cotizacionesDolar.solidario).toFixed(2)) * cotizacionesDolar.blue) / cotizacionesDolar.solidario).toFixed(2)} </p><b>USD</b>
+                                    <p className='text-grey'>Con <b>{(((montoArs / ((cotizacionesDolar.ahorro).ask)).toFixed(2)) * (cotizacionesDolar.blue).ask).toFixed(0)} ARS</b> se comprarán</p>
+                                    <p className='display-5'> {((((montoArs / ((cotizacionesDolar.ahorro).ask)).toFixed(2)) * (cotizacionesDolar.blue).ask) / ((cotizacionesDolar.ahorro).ask)).toFixed(2)} </p><b>USD</b>
                                     <p className='text-grey'>a cotización <i>dolar solidario</i></p>
                                     
                                 </div>
@@ -69,7 +70,7 @@ const Calculadora = () => {
                         </div>
                     </div>
                     <div className='card card-rulo bg-dark py-4 my-2 text-white'>
-                        <p>Después de la operación de venta en dólares a cotización blue, se obtienen <b className='resultados'>{((((montoArs / cotizacionesDolar.solidario).toFixed(2)) * cotizacionesDolar.blue).toFixed(0)) - montoArs}</b> pesos de ganancia</p>
+                        <p>Después de la operación de venta en dólares a cotización blue, se obtienen <b className='resultados'>{((((montoArs / ((cotizacionesDolar.ahorro).ask)).toFixed(2)) * (cotizacionesDolar.blue).ask).toFixed(0)) - montoArs}</b> pesos de ganancia</p>
                     </div>
                 </div>
 
