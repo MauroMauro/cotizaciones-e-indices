@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/cotizaciones-e-indices/static/css/main.f2897cb1.css",
-    "main.js": "/cotizaciones-e-indices/static/js/main.34f2c2b4.js",
+    "main.css": "/cotizaciones-e-indices/static/css/main.f0acde02.css",
+    "main.js": "/cotizaciones-e-indices/static/js/main.15387b29.js",
     "index.html": "/cotizaciones-e-indices/index.html",
-    "main.f2897cb1.css.map": "/cotizaciones-e-indices/static/css/main.f2897cb1.css.map",
-    "main.34f2c2b4.js.map": "/cotizaciones-e-indices/static/js/main.34f2c2b4.js.map"
+    "main.f0acde02.css.map": "/cotizaciones-e-indices/static/css/main.f0acde02.css.map",
+    "main.15387b29.js.map": "/cotizaciones-e-indices/static/js/main.15387b29.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2897cb1.css",
-    "static/js/main.34f2c2b4.js"
+    "static/css/main.f0acde02.css",
+    "static/js/main.15387b29.js"
   ]
 }
