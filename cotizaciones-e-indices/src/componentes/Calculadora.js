@@ -98,6 +98,11 @@ const Calculadora = () => {
                         <div className='card card-pf bg-dark py-4 my-2 text-white'>
                             <p>Después de 30 días se obtendrán <b className='resultados'>{(((tasa / 12) * montoArs)/100)}</b> pesos de ganancia</p>
                         </div>
+
+                        <div>
+                            TEA:  { (((Math.pow(  (1+((tasa / 12)/100))  , 12) ) -1)*100).toFixed(1)  } <br />
+                            
+                        </div>
                     </div>
                 </div>
 
